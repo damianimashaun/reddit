@@ -28,11 +28,12 @@ const s = StyleSheet.create({
 });
 
 const MiniCard = props => {
-  const {title, time, author, onPress} = props;
+  const {title, time, author, description, img, onPress} = props;
   const d = new Date(time);
 
   return (
-    <TouchableOpacity onPress={() => onPress(props)}>
+    <TouchableOpacity
+      onPress={() => onPress({title, time, author, description, img})}>
       <View style={s.container}>
         <Text style={s.time}>{d.toDateString()}</Text>
         <Text style={s.title}>{title}</Text>

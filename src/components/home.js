@@ -40,14 +40,21 @@ const Home = ({navigation}) => {
 
   const RenderItem = useCallback(
     ({item}) => {
-      const {title, created_utc, author, selftext} = item;
-      console.log({item});
+      const {title, created_utc, author, selftext, preview = {}} = item;
+
+      const img =
+        preview.images && preview.images.length
+          ? preview.images[0]?.resolutions[0]?.url || ''
+          : '';
+
+      console.log({img});
       return (
         <MiniCard
           title={title}
           time={created_utc}
           author={author}
           description={selftext}
+          img={img}
           onPress={onPress}
         />
       );
