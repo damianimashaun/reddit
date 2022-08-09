@@ -47,7 +47,6 @@ const Home = ({navigation}) => {
           ? preview.images[0]?.resolutions[0]?.url || ''
           : '';
 
-      console.log({img});
       return (
         <MiniCard
           title={title}

@@ -14,7 +14,6 @@ const useRedditPosts = () => {
       const results = data.data;
       setPosts(results);
       setLoading(false);
-      console.log({a: results.length});
     };
 
     fetchPosts();
