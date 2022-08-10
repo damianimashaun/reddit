@@ -7,6 +7,7 @@ import {
   StyleSheet,
   ActivityIndicator,
   FlatList,
+  TouchableOpacity,
 } from 'react-native';
 import {useRedditPosts} from '../hooks/useRedditPosts';
 import {MiniCard} from './card';
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
 });
 
 const Home = ({navigation}) => {
-  const {posts, isLoading} = useRedditPosts();
+  const {posts, isLoading, retryFetchPosts} = useRedditPosts();
 
   const onPress = useCallback(
     data => {
@@ -61,13 +62,21 @@ const Home = ({navigation}) => {
     [onPress],
   );
 
+  const canRetry = !isLoading && !posts.length;
+  const canShowPosts = !isLoading && !!posts.length;
+
   return (
     <SafeAreaView style={styles.flexOne}>
       <StatusBar />
       <Text style={styles.title}>/r/ReactNative</Text>
       <View style={styles.home}>
         {isLoading && <ActivityIndicator size="large" />}
-        {!isLoading && (
+        {canRetry && (
+          <TouchableOpacity onPress={retryFetchPosts}>
+            <Text>Request failed. Tap to retry</Text>
+          </TouchableOpacity>
+        )}
+        {canShowPosts && (
           <FlatList
             data={posts}
             renderItem={RenderItem}
