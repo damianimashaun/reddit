@@ -1,0 +1,26 @@
+{
+  "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+    "5CCAE1CC59D82D116F7FF31491A044E6A545E967" : {
+      "DVTSourceControlBranchIdentifierKey" : "main",
+      "DVTSourceControlLocationRevisionKey" : "5b4d6b701ed850f355a3f49ba03f202843eb6220",
+      "DVTSourceControlBranchOptionsKey" : 4,
+      "DVTSourceControlBranchRemoteNameKey" : "origin",
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5CCAE1CC59D82D116F7FF31491A044E6A545E967",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7E4609AB-BF5F-4810-AAB0-B691A176E445",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5CCAE1CC59D82D116F7FF31491A044E6A545E967" : "reddit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "reddit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/reddit.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/damianimashaun\/reddit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5CCAE1CC59D82D116F7FF31491A044E6A545E967"
+    }
+  ]
+}
